@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:signup_screen/views/welcome_screen/welcome_screen.dart';
+import 'package:signup_screen/views/signup_screen/tabs/name_field.dart';
 
 void main() {
   runApp(MyApp());
@@ -21,7 +21,7 @@ class MyApp extends StatelessWidget {
           ),
           primarySwatch: Colors.blue,
           fontFamily: 'Montserrat'),
-      home: WelcomeScreen(),
+      home: NameField(),
     );
   }
 }
