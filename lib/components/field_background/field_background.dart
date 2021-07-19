@@ -4,10 +4,14 @@ import 'package:signup_screen/components/button/next_button.dart';
 import 'package:signup_screen/components/space_box/space_box.dart';
 
 class FieldBackground extends StatelessWidget {
-  const FieldBackground({
-    Key key,
-    @required this.screen,
-  }) : super(key: key);
+  const FieldBackground(
+      {Key key,
+      @required this.screen,
+      this.nextButtonFunc,
+      this.previousButtonFunc})
+      : super(key: key);
+  final Function previousButtonFunc;
+  final Function nextButtonFunc;
 
   final Size screen;
 
@@ -32,11 +36,11 @@ class FieldBackground extends StatelessWidget {
                 Row(
                   children: [
                     PreviousButton(
-                      btnfunc: () {},
+                      btnfunc: previousButtonFunc,
                     ),
                     NextButton(
                       btntext: 'Next',
-                      btnfunc: () {},
+                      btnfunc: nextButtonFunc,
                     ),
                   ],
                 ),
