@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:signup_screen/components/button/button.dart';
+import 'package:signup_screen/components/button/next_button.dart';
 import 'package:signup_screen/components/space_box/space_box.dart';
 
 class WelcomeScreen extends StatelessWidget {
@@ -46,7 +46,7 @@ class WelcomeScreen extends StatelessWidget {
               SpaceBox(
                 boxHeight: screen.height * 0.03,
               ),
-              Button(btnfunc: () {}, btntext: 'Next')
+              NextButton(btnfunc: () {}, btntext: 'Next')
             ],
           ),
         ),
