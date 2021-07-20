@@ -14,7 +14,10 @@ class UniversityField extends StatelessWidget {
           FieldBackground(
             screen: screen,
             nextButtonFunc: () {},
-            previousButtonFunc: () {},
+            previousButtonFunc: () {
+              final TabController controller = DefaultTabController.of(context);
+              controller.animateTo(controller.index - 1);
+            },
           ),
           Center(
             child: Padding(

@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:signup_screen/views/signup_screen/tabs/gender_field.dart';
 import 'package:signup_screen/views/signup_screen/welcome_screen.dart';
 
 void main() {
@@ -11,7 +10,6 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Flutter Demo',
-      debugShowCheckedModeBanner: false,
       theme: ThemeData(
           elevatedButtonTheme: ElevatedButtonThemeData(
             style: ElevatedButton.styleFrom(
@@ -21,7 +19,7 @@ class MyApp extends StatelessWidget {
           ),
           primarySwatch: Colors.blue,
           fontFamily: 'Montserrat'),
-      home: GenderField(),
+      home: WelcomeScreen(),
     );
   }
 }

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:signup_screen/components/button/next_button.dart';
 import 'package:signup_screen/components/space_box/space_box.dart';
+import 'package:signup_screen/views/signup_screen/field_tabs.dart';
 
 class WelcomeScreen extends StatelessWidget {
   const WelcomeScreen({Key key}) : super(key: key);
@@ -17,14 +18,16 @@ class WelcomeScreen extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
               SpaceBox(
-                boxHeight: screen.height * 0.1,
+                boxHeight: screen.height * 0.08,
               ),
               Image.asset(
                 'assets/images/logo-no-bg.png',
                 width: screen.width * 0.65,
               ),
-              SpaceBox(
-                boxHeight: screen.height * 0.35,
+              Expanded(
+                child: SpaceBox(
+                    // boxHeight: screen.height * 0.3,
+                    ),
               ),
               Text(
                 "It’s a great day to be a genius!",
@@ -46,7 +49,15 @@ class WelcomeScreen extends StatelessWidget {
               SpaceBox(
                 boxHeight: screen.height * 0.03,
               ),
-              NextButton(btnfunc: () {}, btntext: 'Next')
+              NextButton(
+                  btnfunc: () {
+                    Navigator.push(context,
+                        MaterialPageRoute(builder: (context) => FieldTabs()));
+                  },
+                  btntext: 'Next'),
+              SpaceBox(
+                boxHeight: screen.height * 0.02,
+              )
             ],
           ),
         ),

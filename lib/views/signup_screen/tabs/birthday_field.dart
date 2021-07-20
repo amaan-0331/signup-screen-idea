@@ -20,8 +20,16 @@ class _BirthdayFieldState extends State<BirthdayField> {
           children: [
             FieldBackground(
               screen: screen,
-              nextButtonFunc: () {},
-              previousButtonFunc: () {},
+              nextButtonFunc: () {
+                final TabController controller =
+                    DefaultTabController.of(context);
+                controller.animateTo(controller.index + 1);
+              },
+              previousButtonFunc: () {
+                final TabController controller =
+                    DefaultTabController.of(context);
+                controller.animateTo(controller.index - 1);
+              },
             ),
             Center(
               child: Padding(

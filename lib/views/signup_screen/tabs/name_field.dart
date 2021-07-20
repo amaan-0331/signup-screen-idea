@@ -13,8 +13,13 @@ class NameField extends StatelessWidget {
         children: [
           FieldBackground(
             screen: screen,
-            nextButtonFunc: () {},
-            previousButtonFunc: () {},
+            nextButtonFunc: () {
+              final TabController controller = DefaultTabController.of(context);
+              controller.animateTo(controller.index + 1);
+            },
+            previousButtonFunc: () {
+              Navigator.pop(context);
+            },
           ),
           Center(
             child: Padding(

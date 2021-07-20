@@ -18,7 +18,7 @@ class NextButton extends StatelessWidget {
       ),
       child: Text(
         btntext,
-        style: TextStyle(fontSize: 18),
+        style: TextStyle(fontWeight: FontWeight.bold, fontSize: 18),
       ),
     );
   }
