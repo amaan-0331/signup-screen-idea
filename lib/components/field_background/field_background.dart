@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:signup_screen/components/button/previous_button.dart';
-import 'package:signup_screen/components/button/next_button.dart';
+import 'package:signup_screen/components/button/long_button.dart';
 import 'package:signup_screen/components/space_box/space_box.dart';
 
 class FieldBackground extends StatelessWidget {
@@ -8,10 +8,12 @@ class FieldBackground extends StatelessWidget {
       {Key key,
       @required this.screen,
       this.nextButtonFunc,
-      this.previousButtonFunc})
+      this.previousButtonFunc,
+      this.longBtnText})
       : super(key: key);
   final Function previousButtonFunc;
   final Function nextButtonFunc;
+  final String longBtnText;
 
   final Size screen;
 
@@ -38,9 +40,12 @@ class FieldBackground extends StatelessWidget {
                     PreviousButton(
                       btnfunc: previousButtonFunc,
                     ),
-                    NextButton(
-                      btntext: 'Next',
-                      btnfunc: nextButtonFunc,
+                    Hero(
+                      tag: 'NextBtn',
+                      child: LongButton(
+                        btntext: longBtnText,
+                        btnfunc: nextButtonFunc,
+                      ),
                     ),
                   ],
                 ),

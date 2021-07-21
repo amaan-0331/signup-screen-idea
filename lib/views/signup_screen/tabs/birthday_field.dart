@@ -20,6 +20,7 @@ class _BirthdayFieldState extends State<BirthdayField> {
           children: [
             FieldBackground(
               screen: screen,
+              longBtnText: 'Next',
               nextButtonFunc: () {
                 final TabController controller =
                     DefaultTabController.of(context);

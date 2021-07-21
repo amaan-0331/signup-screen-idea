@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:signup_screen/components/button/next_button.dart';
+import 'package:signup_screen/components/button/long_button.dart';
 import 'package:signup_screen/components/space_box/space_box.dart';
 import 'package:signup_screen/views/signup_screen/field_tabs.dart';
 
@@ -49,12 +49,15 @@ class WelcomeScreen extends StatelessWidget {
               SpaceBox(
                 boxHeight: screen.height * 0.03,
               ),
-              NextButton(
-                  btnfunc: () {
-                    Navigator.push(context,
-                        MaterialPageRoute(builder: (context) => FieldTabs()));
-                  },
-                  btntext: 'Next'),
+              Hero(
+                tag: 'NextBtn',
+                child: LongButton(
+                    btnfunc: () {
+                      Navigator.push(context,
+                          MaterialPageRoute(builder: (context) => FieldTabs()));
+                    },
+                    btntext: 'Next'),
+              ),
               SpaceBox(
                 boxHeight: screen.height * 0.02,
               )

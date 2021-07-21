@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-class NextButton extends StatelessWidget {
-  const NextButton({Key key, this.btntext, this.btnfunc}) : super(key: key);
+class LongButton extends StatelessWidget {
+  const LongButton({Key key, this.btntext, this.btnfunc}) : super(key: key);
   final String btntext;
   final Function btnfunc;
 
