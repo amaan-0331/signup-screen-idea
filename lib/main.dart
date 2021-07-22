@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:signup_screen/views/signup_screen/welcome_screen.dart';
+import 'package:signup_screen/views/splash_screen/splash_screen.dart';
 
 void main() {
   runApp(MyApp());
@@ -19,7 +19,7 @@ class MyApp extends StatelessWidget {
           ),
           primarySwatch: Colors.blue,
           fontFamily: 'Montserrat'),
-      home: WelcomeScreen(),
+      home: SplashScreen(),
     );
   }
 }

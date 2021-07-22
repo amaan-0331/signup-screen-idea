@@ -1,11 +1,21 @@
 import 'package:flutter/material.dart';
 
 class TextInput extends StatelessWidget {
-  const TextInput({Key key, this.hintText, this.lblText, this.inputLines})
+  const TextInput(
+      {Key key,
+      this.hintText,
+      this.lblText,
+      this.inputLines,
+      this.inputController,
+      this.inputType,
+      this.validatorFunc})
       : super(key: key);
   final String lblText;
   final String hintText;
   final int inputLines;
+  final TextEditingController inputController;
+  final Function validatorFunc;
+  final TextInputType inputType;
 
   @override
   Widget build(BuildContext context) {
@@ -16,6 +26,9 @@ class TextInput extends StatelessWidget {
       _maxlines = inputLines;
     }
     return TextFormField(
+      keyboardType: inputType,
+      validator: validatorFunc,
+      controller: inputController,
       maxLines: _maxlines,
       decoration: InputDecoration(
           labelText: lblText.toUpperCase(),

@@ -20,9 +20,12 @@ class WelcomeScreen extends StatelessWidget {
               SpaceBox(
                 boxHeight: screen.height * 0.08,
               ),
-              Image.asset(
-                'assets/images/logo-no-bg.png',
-                width: screen.width * 0.65,
+              Hero(
+                tag: 'splashLogo',
+                child: Image.asset(
+                  'assets/images/logo-no-bg.png',
+                  width: screen.width * 0.65,
+                ),
               ),
               Expanded(
                 child: SpaceBox(

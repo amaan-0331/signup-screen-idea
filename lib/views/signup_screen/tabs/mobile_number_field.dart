@@ -30,6 +30,7 @@ class MobileNumberField extends StatelessWidget {
               child: Padding(
                 padding: EdgeInsets.symmetric(horizontal: screen.width * 0.08),
                 child: TextInput(
+                  inputType: TextInputType.number,
                   lblText: 'Mobile number',
                   hintText: 'Your Mobile Number Goes here...',
                 ),

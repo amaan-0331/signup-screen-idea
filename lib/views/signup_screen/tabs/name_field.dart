@@ -7,6 +7,7 @@ class NameField extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final TextEditingController textController = TextEditingController();
     var screen = MediaQuery.of(context).size;
     return SafeArea(
       child: Scaffold(
@@ -28,6 +29,8 @@ class NameField extends StatelessWidget {
               child: Padding(
                 padding: EdgeInsets.symmetric(horizontal: screen.width * 0.08),
                 child: TextInput(
+                  inputType: TextInputType.name,
+                  inputController: textController,
                   lblText: 'full name',
                   hintText: 'Your Name Goes here...',
                 ),
