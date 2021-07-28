@@ -6,6 +6,7 @@ class TextInput extends StatelessWidget {
       this.hintText,
       this.lblText,
       this.inputLines,
+      this.onChangedFunc,
       this.inputController,
       this.inputType,
       this.validatorFunc})
@@ -13,8 +14,9 @@ class TextInput extends StatelessWidget {
   final String lblText;
   final String hintText;
   final int inputLines;
+  final Function onChangedFunc;
   final TextEditingController inputController;
-  final Function validatorFunc;
+  final String Function(String) validatorFunc;
   final TextInputType inputType;
 
   @override
@@ -27,8 +29,10 @@ class TextInput extends StatelessWidget {
     }
     return TextFormField(
       keyboardType: inputType,
+      autovalidateMode: AutovalidateMode.onUserInteraction,
       validator: validatorFunc,
       controller: inputController,
+      onChanged: onChangedFunc,
       maxLines: _maxlines,
       decoration: InputDecoration(
           labelText: lblText.toUpperCase(),

@@ -20,6 +20,7 @@ class NameField extends StatelessWidget {
                 final TabController controller =
                     DefaultTabController.of(context);
                 controller.animateTo(controller.index + 1);
+                FocusScope.of(context).unfocus();
               },
               previousButtonFunc: () {
                 Navigator.pop(context);
